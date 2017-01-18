@@ -46,8 +46,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\Interfaces\IHealth.cs" />
      <Compile Include="Assets\Code\Interfaces\IMover.cs" />
+     <Compile Include="Assets\Code\Unit\Health.cs" />
+     <Compile Include="Assets\Code\Unit\Mover.cs" />
+     <Compile Include="Assets\Code\Unit\PlayerUnit.cs" />
      <Compile Include="Assets\Code\Unit\UnitBase.cs" />
+     <Compile Include="Assets\Code\Utility\Extensions.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
