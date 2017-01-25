@@ -19,6 +19,20 @@ namespace TAMKShooter
             gameObject.SetActive(false);
         }
 
+        protected void Update()
+        {
+            UpdateInput();
+        }
+
+        private void UpdateInput()
+        {
+            float dirX = Input.GetAxis("Horizontal");
+            float dirZ = Input.GetAxis("Vertical");
+
+            Vector3 direction = new Vector3(dirX, 0, dirZ);
+            mover.MoveToDirection(direction);
+        }
+
         public enum UnitType
         {
             None = 0,

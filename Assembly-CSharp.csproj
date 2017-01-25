@@ -53,6 +53,9 @@
      <Compile Include="Assets\Code\Unit\PlayerUnit.cs" />
      <Compile Include="Assets\Code\Unit\UnitBase.cs" />
      <Compile Include="Assets\Code\Utility\Extensions.cs" />
+     <Compile Include="Assets\Code\Weapons\Projectile.cs" />
+     <Compile Include="Assets\Code\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Code\Weapons\WeaponController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
