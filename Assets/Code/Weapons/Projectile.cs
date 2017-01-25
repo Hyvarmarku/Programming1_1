@@ -17,8 +17,12 @@ namespace TAMKShooter
         private float _shootingForce;
         [SerializeField]
         private int _damage;
+        [SerializeField]
+        private ProjectileType _projectileType;
 
         private Rigidbody _rigidBody;
+
+        public ProjectileType type { get { return _projectileType; } }
 
         protected virtual void Awake()
         {
@@ -34,6 +38,14 @@ namespace TAMKShooter
                 damageReceiver.TakeDamage(_damage);
 
                 // TODO: Instantiate effect
+                Destroy(gameObject);
+            }
+        }
+
+        protected void OnTriggerEnter(Collider col)
+        {
+            if (col.gameObject.layer == LayerMask.NameToLayer("Destroyer"))
+            {
                 Destroy(gameObject);
             }
         }

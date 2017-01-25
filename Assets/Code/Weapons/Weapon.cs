@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using ProjectileType = TAMKShooter.Projectile.ProjectileType;
 using TAMKShooter.Utility;
+using TAMKShooter.Systems;
 
 namespace TAMKShooter
 {
@@ -8,8 +9,6 @@ namespace TAMKShooter
     {
         [SerializeField]
         private ProjectileType _projectileType;
-        [SerializeField]
-        private Projectile _projectilePrefab;
 
         public void Shoot(int projectileLayer)
         {
@@ -24,8 +23,15 @@ namespace TAMKShooter
 
         private Projectile GetProjectile()
         {
-            Projectile projectile = Instantiate(_projectilePrefab, transform.position, transform.rotation);
-            return projectile;
+            Projectile projectilePrefab = Global.Instance.prefabs.GetProjectilePrefabByType(_projectileType);
+
+            if (projectilePrefab != null)
+            {
+                Projectile projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+                return projectile;
+            }
+
+            return null;
         }
     }
 }

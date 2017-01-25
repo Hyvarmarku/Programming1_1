@@ -24,5 +24,18 @@ namespace TAMKShooter
         {
             _previouslyShot += Time.deltaTime;
         }
+
+        public void Shoot(int projectileLayer)
+        {
+            if(_previouslyShot >= _shootingRate)
+            {
+                _previouslyShot = 0;
+
+                foreach (Weapon weapon in _weapons)
+                {
+                    weapon.Shoot(projectileLayer);
+                }
+            }
+        }
     }
 }

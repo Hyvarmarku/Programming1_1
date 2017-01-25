@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4980501922426140}
+  - component: {fileID: 114970528427891620}
   m_Layer: 8
   m_Name: Weapon3
   m_TagString: Untagged
@@ -34,6 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4617692302429790}
+  - component: {fileID: 114005427389386636}
   m_Layer: 8
   m_Name: Weapon2
   m_TagString: Untagged
@@ -71,6 +73,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4750972040974018}
+  - component: {fileID: 114137293428024404}
   m_Layer: 8
   m_Name: Weapon4
   m_TagString: Untagged
@@ -86,6 +89,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4498464163610776}
+  - component: {fileID: 114761674864796602}
   m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
@@ -101,6 +105,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4859654562183242}
+  - component: {fileID: 114580034232473810}
   m_Layer: 8
   m_Name: Weapon1
   m_TagString: Untagged
@@ -171,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524123476151660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.77, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4498464163610776}
@@ -258,6 +263,34 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!114 &114005427389386636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443454799352760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d8887059c0a6c4bb6c2da6aa7e85f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
+  _projectilePrefab: {fileID: 114499485900276334, guid: 6b98d3e32c92daf42aa13c8b5ed3f216,
+    type: 2}
+--- !u!114 &114137293428024404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678752428465262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d8887059c0a6c4bb6c2da6aa7e85f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
+  _projectilePrefab: {fileID: 114499485900276334, guid: 6b98d3e32c92daf42aa13c8b5ed3f216,
+    type: 2}
 --- !u!114 &114237939938434982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,6 +302,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38779eaa8cfb0dc4d82c1f9c2581378a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114580034232473810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858567783419894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d8887059c0a6c4bb6c2da6aa7e85f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
+  _projectilePrefab: {fileID: 114499485900276334, guid: 6b98d3e32c92daf42aa13c8b5ed3f216,
+    type: 2}
 --- !u!114 &114657893949621630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,3 +340,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &114761674864796602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802018381448264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d97e0eddc5000240a55383aebd762ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootingSpeed: 4
+--- !u!114 &114970528427891620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190342740648828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d8887059c0a6c4bb6c2da6aa7e85f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
+  _projectilePrefab: {fileID: 114499485900276334, guid: 6b98d3e32c92daf42aa13c8b5ed3f216,
+    type: 2}

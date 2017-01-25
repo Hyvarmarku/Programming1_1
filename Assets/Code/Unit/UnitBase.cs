@@ -10,14 +10,15 @@ namespace TAMKShooter
         #region Properties
         public IHealth health { get; protected set; }
         public IMover mover { get; protected set; }
+        public WeaponController weapons { get; protected set;}
         #endregion
 
         #region Unity messages
         protected virtual void Awake()
         {
-            health = gameObject.GetOrAddComponent<Health>();
-            mover = gameObject.GetOrAddComponent<Mover>();
+            InitRequiredComponents();
         }
+
         #endregion
 
         #region Public interface
@@ -34,5 +35,12 @@ namespace TAMKShooter
         protected abstract void Die();
         public abstract int projectileLayer { get; }
         #endregion
+
+        private void InitRequiredComponents()
+        {
+            health = gameObject.GetOrAddComponent<Health>();
+            mover = gameObject.GetOrAddComponent<Mover>();
+            weapons = gameObject.GetComponentInChildren<WeaponController>();
+        }
     }
 }
