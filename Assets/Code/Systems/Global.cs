@@ -45,6 +45,8 @@ namespace TAMKShooter.Systems
 
         private void Init()
         {
+            DontDestroyOnLoad(gameObject);
+
             if (_prefabs == null)
                 _prefabs = GetComponentInChildren<Prefabs>();
         }

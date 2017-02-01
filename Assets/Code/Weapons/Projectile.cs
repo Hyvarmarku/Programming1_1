@@ -20,13 +20,13 @@ namespace TAMKShooter
         [SerializeField]
         private ProjectileType _projectileType;
 
-        private Rigidbody _rigidBody;
+        public Rigidbody rigidBody { get; private set;}
 
         public ProjectileType type { get { return _projectileType; } }
 
         protected virtual void Awake()
         {
-            _rigidBody = gameObject.GetOrAddComponent<Rigidbody>();
+            rigidBody = gameObject.GetOrAddComponent<Rigidbody>();
         }
 
         protected void OnCollisionEnter(Collision col)
@@ -52,7 +52,7 @@ namespace TAMKShooter
 
         public void Shoot(Vector3 direction)
         {
-            _rigidBody.AddForce(direction * _shootingForce, ForceMode.Impulse);
+            rigidBody.AddForce(direction * _shootingForce, ForceMode.Impulse);
         }
     }
 }
