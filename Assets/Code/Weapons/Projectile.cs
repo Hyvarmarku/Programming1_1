@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TAMKShooter.Utility;
+using TAMKShooter.Systems;
 
 namespace TAMKShooter
 {
@@ -20,6 +21,8 @@ namespace TAMKShooter
         [SerializeField]
         private ProjectileType _projectileType;
 
+        private IShooter _shooter;
+
         public Rigidbody rigidBody { get; private set;}
 
         public ProjectileType type { get { return _projectileType; } }
@@ -36,9 +39,7 @@ namespace TAMKShooter
             if (damageReceiver != null)
             {
                 damageReceiver.TakeDamage(_damage);
-
-                // TODO: Instantiate effect
-                Destroy(gameObject);
+                _shooter.ProjectileHit(this);
             }
         }
 
@@ -46,12 +47,14 @@ namespace TAMKShooter
         {
             if (col.gameObject.layer == LayerMask.NameToLayer("Destroyer"))
             {
-                Destroy(gameObject);
+                _shooter.ProjectileHit(this);
+
             }
         }
 
-        public void Shoot(Vector3 direction)
+        public void Shoot(IShooter shooter, Vector3 direction)
         {
+            _shooter = shooter;
             rigidBody.AddForce(direction * _shootingForce, ForceMode.Impulse);
         }
     }

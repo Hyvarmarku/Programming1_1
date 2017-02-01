@@ -3,6 +3,14 @@ namespace TAMKShooter.Systems
 {
     public class ProjectilePool : GenericPool<Projectile>
     {
+        [SerializeField]
+        private Projectile.ProjectileType _projectileType;
+
+        public Projectile.ProjectileType projectileType
+        {
+            get { return _projectileType; }
+        }
+
         protected override void Deactivate(Projectile item)
         {
             item.transform.position = Vector3.zero;
