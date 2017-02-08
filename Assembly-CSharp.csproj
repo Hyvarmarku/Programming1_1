@@ -56,6 +56,9 @@
      <Compile Include="Assets\Code\Systems\Pools.cs" />
      <Compile Include="Assets\Code\Systems\Prefabs.cs" />
      <Compile Include="Assets\Code\Systems\ProjectilePool.cs" />
+     <Compile Include="Assets\Code\Systems\SceneManager.cs" />
+     <Compile Include="Assets\Code\Unit\EnemyUnit.cs" />
+     <Compile Include="Assets\Code\Unit\EnemyUnits.cs" />
      <Compile Include="Assets\Code\Unit\Health.cs" />
      <Compile Include="Assets\Code\Unit\Mover.cs" />
      <Compile Include="Assets\Code\Unit\PlayerUnit.cs" />

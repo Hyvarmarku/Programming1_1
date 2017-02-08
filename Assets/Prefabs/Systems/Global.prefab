@@ -108,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1460868845087650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7700005, y: -0.00000022351742, z: 0.00000029802322}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4120715042191344}
@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3fcd45d89e8b644a3ace7182bd7b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectAmount: 20
+  _objectAmount: 60
   _objectPrefab: {fileID: 114499485900276334, guid: 6b98d3e32c92daf42aa13c8b5ed3f216,
     type: 2}
-  _shouldGrow: 0
+  _shouldGrow: 1
   _projectileType: 1
 --- !u!114 &114641185326758716
 MonoBehaviour:
@@ -170,8 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8615f398e2c5b2543893cc9a22426758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePrefabs:
-  - {fileID: 114499485900276334, guid: 6b98d3e32c92daf42aa13c8b5ed3f216, type: 2}
+  _unitPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114842398198481066
 MonoBehaviour:
   m_ObjectHideFlags: 1

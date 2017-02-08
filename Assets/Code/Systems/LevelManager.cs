@@ -4,8 +4,16 @@ using UnityEngine;
 
 namespace TAMKShooter.Systems
 {
-    public class LevelManager : MonoBehaviour
+    public class LevelManager : SceneManager
     {
+        [SerializeField]
+        private PlayerUnits _playerUnits;
+
+        public PlayerUnits playerUnits
+        {
+            get { return _playerUnits; }
+        }
+
         protected void Awake()
         {
             Initialize();

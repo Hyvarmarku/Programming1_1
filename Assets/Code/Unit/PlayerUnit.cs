@@ -1,16 +1,31 @@
 ﻿using System;
 using UnityEngine;
+using TAMKShooter.Data;
 
 namespace TAMKShooter
 {
     public class PlayerUnit : UnitBase
     {
+
+        [SerializeField]
+        private UnitType _type;
+        public UnitType type
+        {
+            get { return _type; }
+        }
+        public PlayerData data { get; private set; }
+
         public override int projectileLayer
         {
             get
             {
                 return LayerMask.NameToLayer("PlayerProjectile");
             }
+        }
+
+        public void Init(PlayerData playerData)
+        {
+            data = playerData;
         }
 
         protected override void Die()
