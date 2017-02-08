@@ -171,9 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unitPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114237939938434982, guid: 1773907aa9d6f354e8b7e0f6f01f0e3a, type: 2}
+  - {fileID: 114808087667781258, guid: 5915252102d44b34295c279f7466dcfa, type: 2}
+  - {fileID: 114067449553232430, guid: f3424af687bfcad4d8cb9581b18445b6, type: 2}
 --- !u!114 &114842398198481066
 MonoBehaviour:
   m_ObjectHideFlags: 1

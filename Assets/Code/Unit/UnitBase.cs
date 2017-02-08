@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TAMKShooter.Utility;
+using System;
 
 namespace TAMKShooter
 {
@@ -31,16 +32,28 @@ namespace TAMKShooter
         }
         #endregion
 
-        #region Abstracts
-        protected abstract void Die();
+        protected virtual void Die()
+        {
+            health.HealthChanged -= HealthChanged;
+        }
+
         public abstract int projectileLayer { get; }
-        #endregion
 
         private void InitRequiredComponents()
         {
             health = gameObject.GetOrAddComponent<Health>();
             mover = gameObject.GetOrAddComponent<Mover>();
             weapons = gameObject.GetComponentInChildren<WeaponController>();
+
+            health.HealthChanged += HealthChanged;
+        }
+
+        private void HealthChanged(object sender, HealthChangedEventArgs args)
+        {
+            if (args.currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 }

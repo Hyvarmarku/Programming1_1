@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using TAMKShooter.Data;
+using TAMKShooter.Configs;
 
 namespace TAMKShooter
 {
@@ -19,7 +20,7 @@ namespace TAMKShooter
         {
             get
             {
-                return LayerMask.NameToLayer("PlayerProjectile");
+                return LayerMask.NameToLayer(Config.PlayerProjectileLayerName);
             }
         }
 
@@ -31,6 +32,7 @@ namespace TAMKShooter
         protected override void Die()
         {
             // TODO: Handle dying properly.
+            base.Die();
             gameObject.SetActive(false);
         }
 

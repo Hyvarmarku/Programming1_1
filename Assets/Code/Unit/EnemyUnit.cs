@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TAMKShooter.Configs;
 
 namespace TAMKShooter
 {
@@ -12,7 +13,7 @@ namespace TAMKShooter
         {
             get
             {
-                return LayerMask.NameToLayer("EnemyProjectile");
+                return LayerMask.NameToLayer(Config.EnemyProjectileLayerName);
             }
         }
 
@@ -24,6 +25,7 @@ namespace TAMKShooter
         protected override void Die()
         {
             // Sounds, explosions
+            base.Die();
             gameObject.SetActive(false);
             enemyUnits.EnemyDied(this);
         }
