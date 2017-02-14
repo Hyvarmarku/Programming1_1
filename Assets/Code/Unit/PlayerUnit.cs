@@ -43,18 +43,7 @@ namespace TAMKShooter
 
         private void UpdateInput()
         {
-            float dirX = Input.GetAxis("Horizontal");
-            float dirZ = Input.GetAxis("Vertical");
 
-            Vector3 direction = new Vector3(dirX, 0, dirZ);
-            mover.MoveToDirection(direction);
-
-            bool shoot = Input.GetButton("Shoot");
-
-            if (shoot)
-            {
-                weapons.Shoot(projectileLayer);
-            }
         }
 
         public enum UnitType

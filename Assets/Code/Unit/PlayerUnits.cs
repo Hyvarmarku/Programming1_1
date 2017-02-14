@@ -29,6 +29,12 @@ namespace TAMKShooter
                     Debug.LogError("UNIT TYPE NOT FOUND: " + pd.unitType);
                 }
             }
+
+            InputManager inputManager = FindObjectOfType<InputManager>();
+            PlayerUnit[] unitsToPass = new PlayerUnit[_players.Count];
+            _players.Values.CopyTo(unitsToPass,0);
+
+            inputManager.Init(unitsToPass);
         }
 
         // Update player movement

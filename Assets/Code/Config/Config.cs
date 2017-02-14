@@ -16,5 +16,17 @@ namespace TAMKShooter.Configs
 
         public const string PlayerProjectileLayerName = "PlayerProjectile";
         public const string EnemyProjectileLayerName = "EnemyProjectile";
+
+        public const string ArrowHorizontal = "ArrowHorizontal";
+        public const string ArrowVertical = "ArrowVertical";
+        public const string ArrowShoot = "ArrowShoot";
+
+        public const string WasdHorizontal = "WasdHorizontal";
+        public const string WasdVecrical = "WasdVertical";
+        public const string WasdShoot = "WasdShoot";
+
+        public const string PadOneHorizontal = "Pad1Horizontal";
+        public const string PadOneVertical = "Pad1Vertical";
+        public const string PadOneShoot = "Pad1Shoot";
     }
 }

@@ -29,14 +29,23 @@ namespace TAMKShooter.Systems
 
             enemyUnits.Init();
 
-            PlayerData pd = new PlayerData()
+            PlayerData pd1 = new PlayerData()
             {
                 playerId = PlayerData.PlayerId.Player1,
                 unitType = PlayerUnit.UnitType.Heavy,
+                controllerType = PlayerData.ControllerType.WASD,
                 lives = 3
             };
 
-            playerUnits.Init(pd);
+            PlayerData pd2 = new PlayerData()
+            {
+                playerId = PlayerData.PlayerId.Player2,
+                unitType = PlayerUnit.UnitType.Balanced,
+                controllerType = PlayerData.ControllerType.Arrow,
+                lives = 3
+            };
+
+            playerUnits.Init(pd1,pd2);
         }
     }
 }
