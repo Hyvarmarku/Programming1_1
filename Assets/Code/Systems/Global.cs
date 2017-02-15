@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TAMKShooter.Utility;
 
 namespace TAMKShooter.Systems
 {
@@ -29,6 +30,7 @@ namespace TAMKShooter.Systems
 
         public Prefabs prefabs { get { return _prefabs; } }
         public Pools pools { get { return _pools; } }
+        public GameManager gameManager { get; private set; }
 
         protected void Awake()
         {
@@ -37,7 +39,7 @@ namespace TAMKShooter.Systems
                 _instance = this;
             }
 
-            if (_instance = this)
+            if (_instance == this)
             {
                 Init();
             }
@@ -55,6 +57,9 @@ namespace TAMKShooter.Systems
                 _prefabs = GetComponentInChildren<Prefabs>();
             if (_pools == null)
                 _pools = GetComponentInChildren<Pools>();
+
+            gameManager = gameObject.GetOrAddComponent<GameManager>();
+            gameManager.Init();
         }
     }
 }

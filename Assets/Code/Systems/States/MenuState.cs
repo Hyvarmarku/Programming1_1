@@ -13,7 +13,7 @@ namespace TAMKShooter.Systems.States
 
         public MenuState() : base()
         {
-            state = GameStateType.MenuState;
+            stateType = GameStateType.MenuState;
             AddTransition(GameStateTransitionType.MenuToInGame, GameStateType.InGameState);
         }
     }

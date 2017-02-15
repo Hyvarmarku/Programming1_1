@@ -9,7 +9,7 @@ namespace TAMKShooter.Systems.States
     public abstract class GameStateBase
     {
         public abstract string sceneName { get; }
-        public GameStateType state { get; protected set; }
+        public GameStateType stateType { get; protected set; }
         protected Dictionary<GameStateTransitionType, GameStateType> transitions { get; set; }
 
 
@@ -56,13 +56,15 @@ namespace TAMKShooter.Systems.States
 
         public virtual void StateDeactivating()
         {
-
+            Global.Instance.gameManager.RaiseGameStateChangingEvent(stateType);
         }
+
         private void HandleSceneLoaded(UnitySceneManager.Scene scene, UnitySceneManager.LoadSceneMode loadMode)
         {
             if (scene == UnitySceneManager.SceneManager.GetSceneByName(sceneName))
             {
                 UnitySceneManager.SceneManager.sceneLoaded -= HandleSceneLoaded;
+                Global.Instance.gameManager.RaiseGameStateChangedEvent(stateType);
             }
         }
 

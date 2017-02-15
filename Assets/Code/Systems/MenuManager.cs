@@ -1,13 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TAMKShooter.Systems
 {
     public class MenuManager : SceneManager
     {
+        public override GameStateType stateType
+        {
+            get
+            {
+                return GameStateType.MenuState;
+            }
+        }
+
         public void StartGame()
         {
-            Debug.Log("Start Game");
+            Global.Instance.gameManager.PerformTransition(GameStateTransitionType.MenuToInGame);
         }
         public void LoadGame()
         {

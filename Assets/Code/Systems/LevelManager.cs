@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TAMKShooter.Data;
+using System;
 
 namespace TAMKShooter.Systems
 {
@@ -16,7 +17,15 @@ namespace TAMKShooter.Systems
         {
             get; private set;
         }
-    
+
+        public override GameStateType stateType
+        {
+            get
+            {
+               return GameStateType.InGameState;
+            }
+        }
+
         protected void Awake()
         {
             Initialize();

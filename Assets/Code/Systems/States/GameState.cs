@@ -24,7 +24,7 @@ namespace TAMKShooter.Systems.States
         }
         public GameState(int levelIndex) : base()
         {
-            state = GameStateType.InGameState;
+            stateType = GameStateType.InGameState;
             currentLevelIndex = levelIndex;
 
             AddTransition(GameStateTransitionType.InGameToGameOver, GameStateType.GameOverState);
