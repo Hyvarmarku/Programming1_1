@@ -28,5 +28,9 @@ namespace TAMKShooter.Configs
         public const string PadOneHorizontal = "Pad1Horizontal";
         public const string PadOneVertical = "Pad1Vertical";
         public const string PadOneShoot = "Pad1Shoot";
+
+        public const string PadTwoHorizontal = "Pad2Horizontal";
+        public const string PadTwoVertical = "Pad2Vertical";
+        public const string PadTwoShoot = "Pad2Shoot";
     }
 }

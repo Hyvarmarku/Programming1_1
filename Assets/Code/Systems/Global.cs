@@ -31,6 +31,7 @@ namespace TAMKShooter.Systems
         public Prefabs prefabs { get { return _prefabs; } }
         public Pools pools { get { return _pools; } }
         public GameManager gameManager { get; private set; }
+        public int maxPlayers;
 
         protected void Awake()
         {

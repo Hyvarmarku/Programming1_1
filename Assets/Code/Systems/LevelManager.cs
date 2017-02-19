@@ -54,7 +54,23 @@ namespace TAMKShooter.Systems
                 lives = 3
             };
 
-            playerUnits.Init(pd1,pd2);
+            PlayerData pd3 = new PlayerData()
+            {
+                playerId = PlayerData.PlayerId.Player3,
+                unitType = PlayerUnit.UnitType.Balanced,
+                controllerType = PlayerData.ControllerType.GamepadOne,
+                lives = 3
+            };
+
+            PlayerData pd4 = new PlayerData()
+            {
+                playerId = PlayerData.PlayerId.Player4,
+                unitType = PlayerUnit.UnitType.Balanced,
+                controllerType = PlayerData.ControllerType.GamepadTwo,
+                lives = 3
+            };
+
+            playerUnits.Init(pd1,pd2, pd3, pd4);
         }
     }
 }

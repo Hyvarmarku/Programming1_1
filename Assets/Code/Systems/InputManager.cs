@@ -7,22 +7,36 @@ namespace TAMKShooter.Systems
 {
     public class InputManager : MonoBehaviour
     {
+        private int _maxPlayers;
         private PlayerUnit[] _players;
 
+        //This is called when the game is launched for the first time.
         public void Init(PlayerUnit[] units)
         {
-            _players = units;
+            _maxPlayers = Global.Instance.maxPlayers;
+            _players = new PlayerUnit[_maxPlayers];
+
+            for (int i = 0; i < _players.Length; i++)
+            {
+                AddNewPlayer(units[i],i);
+            }
+        }
+
+        //This is called if more players are added in the run time.
+        public void AddNewPlayer(PlayerUnit unit, int index)
+        {
+            _players[index] = unit;
         }
 
         void Update()
         {
             foreach (PlayerUnit unit in _players)
             {
-                Move(unit);
+                UpdateUnitsInput(unit);
             }
         }
 
-        void Move(PlayerUnit unit)
+        void UpdateUnitsInput(PlayerUnit unit)
         {
             PlayerData.ControllerType controller = unit.data.controllerType;
             string horizontalAxis = "";
@@ -47,6 +61,12 @@ namespace TAMKShooter.Systems
                     horizontalAxis = Configs.Config.PadOneHorizontal;
                     verticalAxis = Configs.Config.PadOneVertical;
                     shootInput = Configs.Config.PadOneShoot;
+                    break;
+
+                case PlayerData.ControllerType.GamepadTwo:
+                    horizontalAxis = Configs.Config.PadTwoHorizontal;
+                    verticalAxis = Configs.Config.PadTwoVertical;
+                    shootInput = Configs.Config.PadTwoShoot;
                     break;
             }
 
