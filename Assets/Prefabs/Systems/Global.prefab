@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabs: {fileID: 114641185326758716}
   _pools: {fileID: 114842398198481066}
-  maxPlayers: 3
+  maxPlayers: 4
 --- !u!114 &114151056766559638
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,7 +19,8 @@ namespace TAMKShooter.Systems
         MenuToInGame,
         InGameToMenu,
         InGameToGameOver,
-        GameOverToMenu
+        GameOverToMenu,
+        InGameToInGame
     }
 
     public class GameManager : MonoBehaviour
