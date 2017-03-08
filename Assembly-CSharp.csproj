@@ -76,6 +76,9 @@
      <Compile Include="Assets\Code\Unit\PlayerUnits.cs" />
      <Compile Include="Assets\Code\Unit\UnitBase.cs" />
      <Compile Include="Assets\Code\Utility\Extensions.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\IPathUser.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\Waypoint.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\WaypointSystem.cs" />
      <Compile Include="Assets\Code\Weapons\Projectile.cs" />
      <Compile Include="Assets\Code\Weapons\Weapon.cs" />
      <Compile Include="Assets\Code\Weapons\WeaponController.cs" />
@@ -102,16 +105,16 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>C:/Users/TEMP.TAMK.000/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>C:/Users/TEMP.TAMK.000/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween43.dll</HintPath>
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>C:/Users/TEMP.TAMK.000/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween46.dll</HintPath>
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>C:/Users/TEMP.TAMK.000/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween50.dll</HintPath>
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween50.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
