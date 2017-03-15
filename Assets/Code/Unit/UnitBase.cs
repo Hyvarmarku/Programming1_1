@@ -14,14 +14,6 @@ namespace TAMKShooter
         public WeaponController weapons { get; protected set;}
         #endregion
 
-        #region Unity messages
-        protected virtual void Awake()
-        {
-            InitRequiredComponents();
-        }
-
-        #endregion
-
         #region Public interface
         public void TakeDamage(int amount)
         {
@@ -39,7 +31,7 @@ namespace TAMKShooter
 
         public abstract int projectileLayer { get; }
 
-        private void InitRequiredComponents()
+        protected void InitRequiredComponents()
         {
             health = gameObject.GetOrAddComponent<Health>();
             mover = gameObject.GetOrAddComponent<Mover>();

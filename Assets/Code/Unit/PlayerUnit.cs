@@ -26,6 +26,7 @@ namespace TAMKShooter
 
         public void Init(PlayerData playerData)
         {
+            InitRequiredComponents();
             data = playerData;
         }
 

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TAMKShooter.Configs;
+using TAMKShooter.WaypointSystem;
 
 namespace TAMKShooter
 {
@@ -17,9 +16,14 @@ namespace TAMKShooter
             }
         }
 
-        public void Init(EnemyUnits enemyUnits)
+        private IPathUser _pathUser;
+
+        public void Init(EnemyUnits enemyUnits, Path path)
         {
+            InitRequiredComponents();
             this.enemyUnits = enemyUnits;
+            _pathUser = gameObject.AddComponent<PathUser>();
+            _pathUser.Init(mover,path);
         }
 
         protected override void Die()

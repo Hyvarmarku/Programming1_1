@@ -55,6 +55,7 @@
      <Compile Include="Assets\Code\Interfaces\IHealth.cs" />
      <Compile Include="Assets\Code\Interfaces\IMover.cs" />
      <Compile Include="Assets\Code\Interfaces\IShooter.cs" />
+     <Compile Include="Assets\Code\Systems\AsteroidPool.cs" />
      <Compile Include="Assets\Code\Systems\GameManager.cs" />
      <Compile Include="Assets\Code\Systems\GenericPool.cs" />
      <Compile Include="Assets\Code\Systems\Global.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Code\Systems\States\GameState.cs" />
      <Compile Include="Assets\Code\Systems\States\GameStateBase.cs" />
      <Compile Include="Assets\Code\Systems\States\MenuState.cs" />
+     <Compile Include="Assets\Code\Unit\EnemySpawner.cs" />
      <Compile Include="Assets\Code\Unit\EnemyUnit.cs" />
      <Compile Include="Assets\Code\Unit\EnemyUnits.cs" />
      <Compile Include="Assets\Code\Unit\Health.cs" />
@@ -78,6 +80,7 @@
      <Compile Include="Assets\Code\Utility\Extensions.cs" />
      <Compile Include="Assets\Code\WaypointSystem\IPathUser.cs" />
      <Compile Include="Assets\Code\WaypointSystem\Path.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\PathUser.cs" />
      <Compile Include="Assets\Code\WaypointSystem\Waypoint.cs" />
      <Compile Include="Assets\Code\Weapons\Projectile.cs" />
      <Compile Include="Assets\Code\Weapons\Weapon.cs" />

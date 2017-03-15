@@ -8,6 +8,10 @@ namespace TAMKShooter.Systems
     {
         [SerializeField]
         private List<ProjectilePool> _projectilePool = new List<ProjectilePool>();
+        [SerializeField]
+        private AsteroidPool _asteroidPool;
+
+        public AsteroidPool AsteroidPool { get { return _asteroidPool; } }
 
         public ProjectilePool GetPool(Projectile.ProjectileType projectileType)
         {

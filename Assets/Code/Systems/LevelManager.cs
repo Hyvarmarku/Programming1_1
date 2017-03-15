@@ -12,6 +12,7 @@ namespace TAMKShooter.Systems
     public class LevelManager : SceneManager
     {
         private ConditionBase[] _conditions;
+        private EnemySpawner[] _enemySpawners;
 
         public PlayerUnits playerUnits
         {
@@ -40,8 +41,13 @@ namespace TAMKShooter.Systems
         {
             playerUnits = GetComponentInChildren<PlayerUnits>();
             enemyUnits = GetComponentInChildren<EnemyUnits>();
-
             enemyUnits.Init();
+
+            _enemySpawners = GetComponentsInChildren<EnemySpawner>();
+            foreach (var enemySpawner in _enemySpawners)
+            {
+                enemySpawner.Init(enemyUnits);
+            }
 
             PlayerData pd1 = new PlayerData()
             {

@@ -163,7 +163,7 @@ namespace TAMKShooter.WaypointSystem
            //return nextWaypoint;
            return direction == Direction.Forward 
                 ? Waypoints[++currentWaypointIndex % Waypoints.Count]
-                : Waypoints[(--currentWaypointIndex >=0
+                : Waypoints[(--currentWaypointIndex >=0d
                 ? currentWaypointIndex
                 : Waypoints.Count -1) % Waypoints.Count];
                                                                                             
