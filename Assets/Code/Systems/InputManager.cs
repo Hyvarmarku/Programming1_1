@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TAMKShooter.Data;
+using System;
 
 namespace TAMKShooter.Systems
 {
@@ -9,12 +10,14 @@ namespace TAMKShooter.Systems
     {
         private int _maxPlayers;
         private PlayerUnit[] _players;
+        private bool _isInitialized = false;
 
         //This is called when the game is launched for the first time.
         public void Init(PlayerUnit[] units)
         {
             _maxPlayers = Global.Instance.maxPlayers;
-            _players = new PlayerUnit[_maxPlayers];
+            _players = new PlayerUnit[units.Length];
+            _isInitialized = true;
 
             for (int i = 0; i < _players.Length; i++)
             {
@@ -30,9 +33,22 @@ namespace TAMKShooter.Systems
 
         void Update()
         {
+            if (!_isInitialized)
+                return;
+
             foreach (PlayerUnit unit in _players)
             {
                 UpdateUnitsInput(unit);
+            }
+
+            UpdateGlobalInputs();
+        }
+
+        void UpdateGlobalInputs()
+        {
+            if (Input.GetKeyDown(KeyCode.F2))
+            {
+                Global.Instance.SaveManager.Save(Global.Instance.CurrentGameData,DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss"));
             }
         }
 

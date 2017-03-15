@@ -12,13 +12,13 @@ namespace TAMKShooter
 
         public void Init()
         {
-            EnemyUnit[] enemies = FindObjectsOfType<EnemyUnit>();
+            //EnemyUnit[] enemies = FindObjectsOfType<EnemyUnit>();
 
-            foreach (EnemyUnit enemy in enemies)
-            {
-                _enemies.Add(enemy);
-                enemy.Init(this, null);
-            }
+            //foreach (EnemyUnit enemy in enemies)
+            //{
+            //    _enemies.Add(enemy);
+            //    enemy.Init(this, null);
+            //}
         }
 
         public void EnemyDied(EnemyUnit enemyUnit)

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TAMKShooter.Utility;
+using TAMKShooter.Data;
+using TAMKShooter.Systems.SaveLoad;
 
 namespace TAMKShooter.Systems
 {
@@ -32,6 +34,9 @@ namespace TAMKShooter.Systems
         public Prefabs prefabs { get { return _prefabs; } }
         public Pools pools { get { return _pools; } }
         public GameManager gameManager { get; private set; }
+        public GameData CurrentGameData {get;set;}
+        public SaveManager SaveManager { get; private set; }
+
         public int maxPlayers;
 
         protected void Awake()
@@ -59,6 +64,9 @@ namespace TAMKShooter.Systems
                 _prefabs = GetComponentInChildren<Prefabs>();
             if (_pools == null)
                 _pools = GetComponentInChildren<Pools>();
+
+            //SaveManager = new SaveManager(new BinaryFormatterSaveLoad<GameData>());
+            SaveManager = new SaveManager(new JSONSaveLoad<GameData>());
 
             gameManager = gameObject.GetOrAddComponent<GameManager>();
             gameManager.Init();

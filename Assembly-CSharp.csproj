@@ -49,6 +49,7 @@
      <Compile Include="Assets\Code\Conditions\ConditionBase.cs" />
      <Compile Include="Assets\Code\Conditions\EnemiesKilledCondition.cs" />
      <Compile Include="Assets\Code\Config\Config.cs" />
+     <Compile Include="Assets\Code\Data\GameData.cs" />
      <Compile Include="Assets\Code\Data\PlayerData.cs" />
      <Compile Include="Assets\Code\GUI\GlobalGUI.cs" />
      <Compile Include="Assets\Code\GUI\LoadingIndicator.cs" />
@@ -65,6 +66,10 @@
      <Compile Include="Assets\Code\Systems\Pools.cs" />
      <Compile Include="Assets\Code\Systems\Prefabs.cs" />
      <Compile Include="Assets\Code\Systems\ProjectilePool.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\BinaryFormatterSaveLoad.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\ISaveLoad.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\JSONSaveLoad.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\SaveManager.cs" />
      <Compile Include="Assets\Code\Systems\SceneManager.cs" />
      <Compile Include="Assets\Code\Systems\States\GameState.cs" />
      <Compile Include="Assets\Code\Systems\States\GameStateBase.cs" />
