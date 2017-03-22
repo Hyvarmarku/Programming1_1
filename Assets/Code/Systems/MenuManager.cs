@@ -48,7 +48,9 @@ namespace TAMKShooter.Systems
 
         public void LoadGame(string saveFileName)
         {
-            //TODO:
+            GameData loadData = Global.Instance.SaveManager.Load(saveFileName);
+            Global.Instance.CurrentGameData = loadData;
+            Global.Instance.gameManager.PerformTransition(GameStateTransitionType.MenuToInGame);
         }
 
         public void QuitGame()
