@@ -52,7 +52,10 @@
      <Compile Include="Assets\Code\Data\GameData.cs" />
      <Compile Include="Assets\Code\Data\PlayerData.cs" />
      <Compile Include="Assets\Code\GUI\GlobalGUI.cs" />
+     <Compile Include="Assets\Code\GUI\LoadItem.cs" />
+     <Compile Include="Assets\Code\GUI\LoadWindow.cs" />
      <Compile Include="Assets\Code\GUI\LoadingIndicator.cs" />
+     <Compile Include="Assets\Code\GUI\Window.cs" />
      <Compile Include="Assets\Code\Interfaces\IHealth.cs" />
      <Compile Include="Assets\Code\Interfaces\IMover.cs" />
      <Compile Include="Assets\Code\Interfaces\IShooter.cs" />

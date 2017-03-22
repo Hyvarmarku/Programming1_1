@@ -49,6 +49,32 @@ namespace TAMKShooter.Systems
                 enemySpawner.Init(enemyUnits);
             }
 
+#if UNITY_EDITOR
+            if (Global.Instance.CurrentGameData == null)
+            {
+                Global.Instance.CurrentGameData = new GameData()
+                {
+                    Level = 1,
+                    PlayerDatas = new List<PlayerData>()
+                    {
+                        new PlayerData()
+                        {
+                            controllerType = PlayerData.ControllerType.Arrow,
+                            playerId = PlayerData.PlayerId.Player1,
+                            lives = 3,
+                            unitType = PlayerUnit.UnitType.Heavy
+                        },
+                        new PlayerData()
+                        {
+                            controllerType = PlayerData.ControllerType.WASD,
+                            playerId = PlayerData.PlayerId.Player2,
+                            lives = 3,
+                            unitType = PlayerUnit.UnitType.Balanced
+                        }
+                    }
+                };
+            }
+#endif
             playerUnits.Init(Global.Instance.CurrentGameData.PlayerDatas.ToArray());
 
             _conditions = GetComponentsInChildren<ConditionBase>();

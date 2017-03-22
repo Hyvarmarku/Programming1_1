@@ -45,6 +45,12 @@ namespace TAMKShooter.Systems
         {
             Debug.Log("Load Game");
         }
+
+        public void LoadGame(string saveFileName)
+        {
+            //TODO:
+        }
+
         public void QuitGame()
         {
             Application.Quit();
