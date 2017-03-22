@@ -8,6 +8,42 @@ namespace TAMKShooter.Systems
 {
     public class InputManager : MonoBehaviour
     {
+        public static readonly Dictionary<PlayerData.ControllerType, string> ControllerNames = new Dictionary<PlayerData.ControllerType, string>()
+        {
+            { PlayerData.ControllerType.Arrow, "Arrow keys" },
+            { PlayerData.ControllerType.WASD , "WASD keys" },
+            { PlayerData.ControllerType.GamepadOne, "Gamepad one" },
+            { PlayerData.ControllerType.GamepadTwo, "Gamepad two" }
+        };
+
+        public static string GetControllerName(PlayerData.ControllerType controllerType)
+        {
+            string result = null;
+
+            if (ControllerNames.ContainsKey(controllerType))
+            {
+                result = ControllerNames[controllerType];
+            }
+
+            return result;
+        }
+
+        public static PlayerData.ControllerType GetControllerTypeByName(string controllerName)
+        {
+            var result = PlayerData.ControllerType.None;
+
+            foreach (var kvp in ControllerNames)
+            {
+                if (kvp.Value == controllerName)
+                {
+                    result = kvp.Key;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
         private int _maxPlayers;
         private PlayerUnit[] _players;
         private bool _isInitialized = false;

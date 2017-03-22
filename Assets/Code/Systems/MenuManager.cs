@@ -1,18 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using TAMKShooter.Data;
+using TAMKShooter.GUI;
 using UnityEngine;
 
 namespace TAMKShooter.Systems
 {
     public class MenuManager : SceneManager
     {
+        private LoadWindow _loadWindow;
+        private PlayerSettings _playerSettingsWindow;
+
         public override GameStateType stateType
         {
             get
             {
                 return GameStateType.MenuState;
             }
+        }
+
+        private void Awake()
+        {
+            _loadWindow = GetComponentInChildren<LoadWindow>(true);
+            _loadWindow.Init(this);
+            _loadWindow.Close();
+            _playerSettingsWindow = GetComponentInChildren<PlayerSettings>(true);
+            _playerSettingsWindow.Init(this);
         }
 
         public void StartGame()
@@ -41,13 +54,15 @@ namespace TAMKShooter.Systems
 
             Global.Instance.gameManager.PerformTransition(GameStateTransitionType.MenuToInGame);
         }
-        public void LoadGame()
+        public void OpenLoadWindow()
         {
-            Debug.Log("Load Game");
+            _loadWindow.Open();
         }
 
         public void LoadGame(string saveFileName)
         {
+            _loadWindow.Close();
+
             GameData loadData = Global.Instance.SaveManager.Load(saveFileName);
             Global.Instance.CurrentGameData = loadData;
             Global.Instance.gameManager.PerformTransition(GameStateTransitionType.MenuToInGame);

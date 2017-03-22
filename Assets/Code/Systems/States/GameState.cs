@@ -18,6 +18,7 @@ namespace TAMKShooter.Systems.States
                 catch (KeyNotFoundException exception)
                 {
                     Debug.LogException(exception);
+                    Debug.LogError(currentLevelIndex);
                     return null;
                 }
             }
