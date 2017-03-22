@@ -15,6 +15,7 @@ namespace TAMKShooter.GUI
 
         public void Init(MenuManager menuManager)
         {
+            _contentParent = GetComponentInChildren<VerticalLayoutGroup>(true);
             _menuManager = menuManager;
             List<string> saveNames = Global.Instance.SaveManager.GetAllSaveNames();
 
@@ -27,7 +28,7 @@ namespace TAMKShooter.GUI
 
         public void LoadGame(string saveFileName)
         {
-            
+            _menuManager.LoadGame(saveFileName);
         }
     }
 }
