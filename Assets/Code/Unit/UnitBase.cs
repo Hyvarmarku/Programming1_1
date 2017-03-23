@@ -12,6 +12,7 @@ namespace TAMKShooter
         public IHealth health { get; protected set; }
         public IMover mover { get; protected set; }
         public WeaponController weapons { get; protected set;}
+        public int bodyDamage = 100;
         #endregion
 
         #region Public interface
@@ -38,6 +39,16 @@ namespace TAMKShooter
             weapons = gameObject.GetComponentInChildren<WeaponController>();
 
             health.HealthChanged += HealthChanged;
+        }
+
+        protected void OnCollisionEnter(Collision col)
+        {
+            GameObject go = col.gameObject;
+
+            if (go.layer == LayerMask.NameToLayer("Enemy") || go.layer == LayerMask.NameToLayer("Player"))
+            {
+                health.TakeDamage(bodyDamage);
+            }
         }
 
         private void HealthChanged(object sender, HealthChangedEventArgs args)

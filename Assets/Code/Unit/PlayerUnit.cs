@@ -2,6 +2,7 @@
 using UnityEngine;
 using TAMKShooter.Data;
 using TAMKShooter.Configs;
+using TAMKShooter.Systems;
 
 namespace TAMKShooter
 {
@@ -32,19 +33,17 @@ namespace TAMKShooter
 
         protected override void Die()
         {
-            // TODO: Handle dying properly.
-            base.Die();
-            gameObject.SetActive(false);
-        }
+            data.lives -= 1;
 
-        protected void Update()
-        {
-            UpdateInput();
-        }
-
-        private void UpdateInput()
-        {
-
+            if (data.lives > 0)
+            {
+                //TODO: Change this
+                FindObjectOfType<PlayerUnits>().ReSpawnPlayer(this);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         public enum UnitType

@@ -71,6 +71,22 @@ namespace TAMKShooter.Systems
                             lives = 3,
                             unitType = PlayerUnit.UnitType.Balanced
                         }
+                        ,
+                        new PlayerData()
+                        {
+                            controllerType = PlayerData.ControllerType.WASD,
+                            playerId = PlayerData.PlayerId.Player3,
+                            lives = 3,
+                            unitType = PlayerUnit.UnitType.Balanced
+                        }
+                        ,
+                        new PlayerData()
+                        {
+                            controllerType = PlayerData.ControllerType.WASD,
+                            playerId = PlayerData.PlayerId.Player4,
+                            lives = 3,
+                            unitType = PlayerUnit.UnitType.Balanced
+                        }
                     }
                 };
             }

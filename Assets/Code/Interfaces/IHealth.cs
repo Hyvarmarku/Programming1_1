@@ -26,5 +26,7 @@ namespace TAMKShooter
         bool TakeDamage(int damage);
 
         event HealthChangedDelegate HealthChanged;
+
+        void ResetHealth(bool indestructible);
     }
 }

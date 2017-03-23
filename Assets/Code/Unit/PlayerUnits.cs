@@ -11,11 +11,13 @@ namespace TAMKShooter
         private Dictionary<PlayerData.PlayerId, PlayerUnit> _players = new Dictionary<PlayerData.PlayerId, PlayerUnit>();
         private int playersCreated;
         private InputManager inputManager;
+        private PlayerSpawnManager _playerSpawner;
 
         public void Init(params PlayerData[] players)
         {
             maxPlayers = Global.Instance.maxPlayers;
             inputManager = FindObjectOfType<InputManager>();
+            _playerSpawner = GetComponentInChildren<PlayerSpawnManager>();
 
             foreach (PlayerData pd in players)
             {
@@ -33,33 +35,32 @@ namespace TAMKShooter
             // Won't allow you to add more players than maxPlayers allows to. To prevent bugs.
             if (playersCreated < maxPlayers)
             {
-                PlayerUnit unitPrefab = Global.Instance.prefabs.GetUnitPrefabByType(pd.unitType);
-                if (unitPrefab != null)
-                {
-                    PlayerUnit unit = Instantiate(unitPrefab, transform);
-                    unit.transform.position = Vector3.zero;
-                    unit.transform.rotation = Quaternion.identity;
-                    unit.Init(pd);
+                PlayerUnit unit = SpawnPlayer(pd);
 
-                    // New unit is send to the InputManager immediately unless it's the beginning of the game. 
-                    // Otherwise the new units are passed to the manager in InputManager.Init() method.
-                    if (!firstInit)
-                    {
-                        inputManager.AddNewPlayer(unit,playersCreated);
-                    }
-
-                    _players.Add(pd.playerId, unit);
-                    playersCreated++;
-                }
-                else
+                // New unit is send to the InputManager immediately unless it's the beginning of the game. 
+                // Otherwise the new units are passed to the manager in InputManager.Init() method.
+                if (!firstInit)
                 {
-                    Debug.LogError("UNIT TYPE NOT FOUND: " + pd.unitType);
+                    inputManager.AddNewPlayer(unit,playersCreated);
                 }
+
+                _players.Add(pd.playerId, unit);
+                playersCreated++;
             }
             else
             {
                 Debug.LogError("FAILED TO ADD A NEW PLAYER. (CURRENT) " + playersCreated + " / " + maxPlayers + " (MAX ALLOWED)");
             }
+        }
+
+        public void ReSpawnPlayer(PlayerUnit player)
+        {
+            _playerSpawner.RespawnPlayer(player);
+        }
+
+        private PlayerUnit SpawnPlayer(PlayerData pd)
+        {
+           return _playerSpawner.SpawnPlayer(pd);
         }
     }
 }

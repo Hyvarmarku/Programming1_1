@@ -247,7 +247,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!64 &64101023012734350
 MeshCollider:
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38779eaa8cfb0dc4d82c1f9c2581378a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodyDamage: 100
   _type: 3
 --- !u!114 &114580034232473810
 MonoBehaviour:
@@ -334,7 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea43397428bda3941803803da51df375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  _maxHealth: 20
+  _indestructibleTime: 1
+  _blinkingSpeed: 0.2
 --- !u!114 &114761674864796602
 MonoBehaviour:
   m_ObjectHideFlags: 1
