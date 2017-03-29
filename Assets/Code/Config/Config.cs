@@ -32,5 +32,6 @@ namespace TAMKShooter.Configs
         public const string PadTwoHorizontal = "Pad2Horizontal";
         public const string PadTwoVertical = "Pad2Vertical";
         public const string PadTwoShoot = "Pad2Shoot";
+        public const int Lives = 3;
     }
 }

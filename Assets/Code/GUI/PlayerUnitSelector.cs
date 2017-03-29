@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TAMKShooter.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,11 +9,14 @@ namespace TAMKShooter.GUI
 {
     public class PlayerUnitSelector : MonoBehaviour
     {
+        public PlayerData.PlayerId PlayerId { get; private set; }
         public PlayerUnit.UnitType SelectedUnitType { get; private set; }
         private Dropdown _dropdown;
 
-        public void Init()
+        public void Init(PlayerData.PlayerId playerId)
         {
+            PlayerId = playerId;
+
             _dropdown = GetComponentInChildren<Dropdown>();
             _dropdown.ClearOptions();
             var optionDataList = new List<Dropdown.OptionData>();
@@ -24,6 +28,9 @@ namespace TAMKShooter.GUI
             }
             _dropdown.AddOptions(optionDataList);
             _dropdown.onValueChanged.AddListener(OnValueChanged);
+
+            _dropdown.value = 0;
+            OnValueChanged(0);
         }
 
         private void OnValueChanged(int index)

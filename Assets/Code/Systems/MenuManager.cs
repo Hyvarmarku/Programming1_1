@@ -26,34 +26,26 @@ namespace TAMKShooter.Systems
             _loadWindow.Close();
             _playerSettingsWindow = GetComponentInChildren<PlayerSettings>(true);
             _playerSettingsWindow.Init(this);
+            _playerSettingsWindow.Close();
         }
 
-        public void StartGame()
+        public void StartGame(List<PlayerData> playerDatas)
         {
+            _playerSettingsWindow.Close();
             Global.Instance.CurrentGameData = new GameData()
             {
                 Level = 1,
-                PlayerDatas = new List<PlayerData>()
-                {
-                    new PlayerData()
-                    {
-                        controllerType = PlayerData.ControllerType.WASD,
-                        lives = 3,
-                        playerId = PlayerData.PlayerId.Player1,
-                        unitType = PlayerUnit.UnitType.Heavy
-                    },
-                    new PlayerData()
-                    {
-                        controllerType = PlayerData.ControllerType.Arrow,
-                        lives = 3,
-                        playerId = PlayerData.PlayerId.Player2,
-                        unitType = PlayerUnit.UnitType.Balanced
-                    }
-                }
+                PlayerDatas = playerDatas
             };
 
             Global.Instance.gameManager.PerformTransition(GameStateTransitionType.MenuToInGame);
         }
+
+        public void OpenStartGameWindow()
+        {
+            _playerSettingsWindow.Open();
+        }
+
         public void OpenLoadWindow()
         {
             _loadWindow.Open();
