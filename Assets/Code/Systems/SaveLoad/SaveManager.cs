@@ -2,6 +2,7 @@
 using TAMKShooter.Data;
 using System.IO;
 using UnityEngine;
+using System;
 
 namespace TAMKShooter.Systems.SaveLoad
 {
@@ -10,6 +11,13 @@ namespace TAMKShooter.Systems.SaveLoad
         public string FileExtension { get { return _saveLoad.FileExtension; } }
 
         private readonly ISaveLoad<GameData> _saveLoad;
+        private const string LanguageKey = "Language";
+
+        public static LangCode Language
+        {
+            get { return (LangCode) Enum.Parse(typeof(LangCode),PlayerPrefs.GetString(LanguageKey, LangCode.EN.ToString())); }
+            set { PlayerPrefs.SetString(LanguageKey, value.ToString()); }
+        }
 
         public SaveManager(ISaveLoad<GameData> saveLoad)
         {

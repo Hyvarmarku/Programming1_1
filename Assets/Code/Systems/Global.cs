@@ -60,6 +60,8 @@ namespace TAMKShooter.Systems
         {
             DontDestroyOnLoad(gameObject);
 
+            Localization.LoadLanguage(SaveManager.Language);
+
             if (_prefabs == null)
                 _prefabs = GetComponentInChildren<Prefabs>();
             if (_pools == null)
