@@ -4035,6 +4035,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 652972209}
+--- !u!114 &657569258 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114151056766559638, guid: 69902cc43b9f2cb468b9fe08689019f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1343884829}
+  m_Script: {fileID: 11500000, guid: 2a3fcd45d89e8b644a3ace7182bd7b78, type: 3}
 --- !u!1 &672857162
 GameObject:
   m_ObjectHideFlags: 0
@@ -8736,6 +8742,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114842398198481066, guid: 69902cc43b9f2cb468b9fe08689019f7,
+        type: 2}
+      propertyPath: _projectilePools.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4191021484446324, guid: 69902cc43b9f2cb468b9fe08689019f7, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8768,6 +8779,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114842398198481066, guid: 69902cc43b9f2cb468b9fe08689019f7,
+        type: 2}
+      propertyPath: _projectilePools.Array.data[0]
+      value: 
+      objectReference: {fileID: 657569258}
+    - target: {fileID: 114842398198481066, guid: 69902cc43b9f2cb468b9fe08689019f7,
+        type: 2}
+      propertyPath: _projectilePools.Array.data[1]
+      value: 
+      objectReference: {fileID: 657569258}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69902cc43b9f2cb468b9fe08689019f7, type: 2}
   m_IsPrefabParent: 0
