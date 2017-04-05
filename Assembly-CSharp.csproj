@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{22DE66B8-BBE6-8229-B917-9106A64FA0C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -47,97 +46,97 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Conditions\ConditionBase.cs" />
-    <Compile Include="Assets\Code\Conditions\EnemiesKilledCondition.cs" />
-    <Compile Include="Assets\Code\Config\Config.cs" />
-    <Compile Include="Assets\Code\Data\GameData.cs" />
-    <Compile Include="Assets\Code\Data\PlayerData.cs" />
-    <Compile Include="Assets\Code\Exceptions\Exceptions.cs" />
-    <Compile Include="Assets\Code\Exceptions\Exceptionscs.cs" />
-    <Compile Include="Assets\Code\GUI\ControlerSelector.cs" />
-    <Compile Include="Assets\Code\GUI\GlobalGUI.cs" />
-    <Compile Include="Assets\Code\GUI\LanguageButton.cs" />
-    <Compile Include="Assets\Code\GUI\LoadItem.cs" />
-    <Compile Include="Assets\Code\GUI\LoadWindow.cs" />
-    <Compile Include="Assets\Code\GUI\LoadingIndicator.cs" />
-    <Compile Include="Assets\Code\GUI\LocalizeLabel.cs" />
-    <Compile Include="Assets\Code\GUI\PlayerSettings.cs" />
-    <Compile Include="Assets\Code\GUI\PlayerSettingsItem.cs" />
-    <Compile Include="Assets\Code\GUI\PlayerUnitSelector.cs" />
-    <Compile Include="Assets\Code\GUI\Window.cs" />
-    <Compile Include="Assets\Code\Interfaces\IHealth.cs" />
-    <Compile Include="Assets\Code\Interfaces\IMover.cs" />
-    <Compile Include="Assets\Code\Interfaces\IShooter.cs" />
-    <Compile Include="Assets\Code\Systems\AsteroidPool.cs" />
-    <Compile Include="Assets\Code\Systems\GameManager.cs" />
-    <Compile Include="Assets\Code\Systems\GenericPool.cs" />
-    <Compile Include="Assets\Code\Systems\Global.cs" />
-    <Compile Include="Assets\Code\Systems\InputManager.cs" />
-    <Compile Include="Assets\Code\Systems\LevelManager.cs" />
-    <Compile Include="Assets\Code\Systems\Localization\Localization.cs" />
-    <Compile Include="Assets\Code\Systems\MenuManager.cs" />
-    <Compile Include="Assets\Code\Systems\PlayerSpawnManager.cs" />
-    <Compile Include="Assets\Code\Systems\Pools.cs" />
-    <Compile Include="Assets\Code\Systems\Prefabs.cs" />
-    <Compile Include="Assets\Code\Systems\ProjectilePool.cs" />
-    <Compile Include="Assets\Code\Systems\SaveLoad\BinaryFormatterSaveLoad.cs" />
-    <Compile Include="Assets\Code\Systems\SaveLoad\ISaveLoad.cs" />
-    <Compile Include="Assets\Code\Systems\SaveLoad\JSONSaveLoad.cs" />
-    <Compile Include="Assets\Code\Systems\SaveLoad\SaveManager.cs" />
-    <Compile Include="Assets\Code\Systems\SceneManager.cs" />
-    <Compile Include="Assets\Code\Systems\States\GameState.cs" />
-    <Compile Include="Assets\Code\Systems\States\GameStateBase.cs" />
-    <Compile Include="Assets\Code\Systems\States\MenuState.cs" />
-    <Compile Include="Assets\Code\Unit\EnemySpawner.cs" />
-    <Compile Include="Assets\Code\Unit\EnemyUnit.cs" />
-    <Compile Include="Assets\Code\Unit\EnemyUnits.cs" />
-    <Compile Include="Assets\Code\Unit\Health.cs" />
-    <Compile Include="Assets\Code\Unit\Mover.cs" />
-    <Compile Include="Assets\Code\Unit\PlayerUnit.cs" />
-    <Compile Include="Assets\Code\Unit\PlayerUnits.cs" />
-    <Compile Include="Assets\Code\Unit\UnitBase.cs" />
-    <Compile Include="Assets\Code\Utility\Extensions.cs" />
-    <Compile Include="Assets\Code\WaypointSystem\IPathUser.cs" />
-    <Compile Include="Assets\Code\WaypointSystem\Path.cs" />
-    <Compile Include="Assets\Code\WaypointSystem\PathUser.cs" />
-    <Compile Include="Assets\Code\WaypointSystem\Waypoint.cs" />
-    <Compile Include="Assets\Code\Weapons\Projectile.cs" />
-    <Compile Include="Assets\Code\Weapons\Weapon.cs" />
-    <Compile Include="Assets\Code\Weapons\WeaponController.cs" />
-    <None Include="Assets\Addons\DOTween_1_1_555\DOTween\DOTween50.xml" />
-    <None Include="Assets\Addons\DOTween_1_1_555\DOTween\DOTween43.xml" />
-    <None Include="Assets\Addons\DOTween_1_1_555\DOTween\DOTween46.xml" />
-    <None Include="Assets\Addons\DOTween_1_1_555\DOTween\readme.txt" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PlaymodeTestsRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VR">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween43.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween46.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween50.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Code\Conditions\ConditionBase.cs" />
+     <Compile Include="Assets\Code\Conditions\EnemiesKilledCondition.cs" />
+     <Compile Include="Assets\Code\Config\Config.cs" />
+     <Compile Include="Assets\Code\Data\GameData.cs" />
+     <Compile Include="Assets\Code\Data\PlayerData.cs" />
+     <Compile Include="Assets\Code\Exceptions\Exceptions.cs" />
+     <Compile Include="Assets\Code\Exceptions\Exceptionscs.cs" />
+     <Compile Include="Assets\Code\GUI\ControlerSelector.cs" />
+     <Compile Include="Assets\Code\GUI\GlobalGUI.cs" />
+     <Compile Include="Assets\Code\GUI\LanguageButton.cs" />
+     <Compile Include="Assets\Code\GUI\LoadItem.cs" />
+     <Compile Include="Assets\Code\GUI\LoadWindow.cs" />
+     <Compile Include="Assets\Code\GUI\LoadingIndicator.cs" />
+     <Compile Include="Assets\Code\GUI\LocalizeLabel.cs" />
+     <Compile Include="Assets\Code\GUI\PlayerSettings.cs" />
+     <Compile Include="Assets\Code\GUI\PlayerSettingsItem.cs" />
+     <Compile Include="Assets\Code\GUI\PlayerUnitSelector.cs" />
+     <Compile Include="Assets\Code\GUI\Window.cs" />
+     <Compile Include="Assets\Code\Interfaces\IHealth.cs" />
+     <Compile Include="Assets\Code\Interfaces\IMover.cs" />
+     <Compile Include="Assets\Code\Interfaces\IShooter.cs" />
+     <Compile Include="Assets\Code\Systems\AsteroidPool.cs" />
+     <Compile Include="Assets\Code\Systems\GameManager.cs" />
+     <Compile Include="Assets\Code\Systems\GenericPool.cs" />
+     <Compile Include="Assets\Code\Systems\Global.cs" />
+     <Compile Include="Assets\Code\Systems\InputManager.cs" />
+     <Compile Include="Assets\Code\Systems\LevelManager.cs" />
+     <Compile Include="Assets\Code\Systems\Localization\Localization.cs" />
+     <Compile Include="Assets\Code\Systems\MenuManager.cs" />
+     <Compile Include="Assets\Code\Systems\PlayerSpawnManager.cs" />
+     <Compile Include="Assets\Code\Systems\Pools.cs" />
+     <Compile Include="Assets\Code\Systems\Prefabs.cs" />
+     <Compile Include="Assets\Code\Systems\ProjectilePool.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\BinaryFormatterSaveLoad.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\ISaveLoad.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\JSONSaveLoad.cs" />
+     <Compile Include="Assets\Code\Systems\SaveLoad\SaveManager.cs" />
+     <Compile Include="Assets\Code\Systems\SceneManager.cs" />
+     <Compile Include="Assets\Code\Systems\States\GameState.cs" />
+     <Compile Include="Assets\Code\Systems\States\GameStateBase.cs" />
+     <Compile Include="Assets\Code\Systems\States\MenuState.cs" />
+     <Compile Include="Assets\Code\Unit\EnemySpawner.cs" />
+     <Compile Include="Assets\Code\Unit\EnemyUnit.cs" />
+     <Compile Include="Assets\Code\Unit\EnemyUnits.cs" />
+     <Compile Include="Assets\Code\Unit\Health.cs" />
+     <Compile Include="Assets\Code\Unit\Mover.cs" />
+     <Compile Include="Assets\Code\Unit\PlayerUnit.cs" />
+     <Compile Include="Assets\Code\Unit\PlayerUnits.cs" />
+     <Compile Include="Assets\Code\Unit\UnitBase.cs" />
+     <Compile Include="Assets\Code\Utility\Extensions.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\IPathUser.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\Path.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\PathUser.cs" />
+     <Compile Include="Assets\Code\WaypointSystem\Waypoint.cs" />
+     <Compile Include="Assets\Code\Weapons\Projectile.cs" />
+     <Compile Include="Assets\Code\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Code\Weapons\WeaponController.cs" />
+     <None Include="Assets\Addons\DOTween_1_1_555\DOTween\DOTween50.xml" />
+     <None Include="Assets\Addons\DOTween_1_1_555\DOTween\DOTween43.xml" />
+     <None Include="Assets\Addons\DOTween_1_1_555\DOTween\DOTween46.xml" />
+     <None Include="Assets\Addons\DOTween_1_1_555\DOTween\readme.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>C:/Users/c5mhyvar/Documents/Programming1_1/Assets/Addons/DOTween_1_1_555/DOTween/DOTween50.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -147,4 +146,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>

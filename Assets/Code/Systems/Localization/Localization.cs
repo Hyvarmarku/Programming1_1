@@ -25,7 +25,7 @@ namespace TAMKShooter.Systems
 
         public static string LocalizationPath
         {
-            get { return Path.Combine(Application.dataPath, LocalizationFolderName); }
+            get { return Path.Combine(Application.streamingAssetsPath, LocalizationFolderName); }
         }
 
         public static Langugage CurrentLangugage { get; private set; }
@@ -127,18 +127,13 @@ namespace TAMKShooter.Systems
 
         public void SetValues(Dictionary<string, string> values)
         {
+            _keys.Clear();
+            _values.Clear();
+
             foreach (var kvp in values)
             {
-                if (_keys.Contains(kvp.Key))
-                {
-                    var index = _keys.IndexOf(kvp.Key);
-                    _values[index] = kvp.Value;
-                }
-                else
-                {
-                    _keys.Add(kvp.Key);
-                    _values.Add(kvp.Value);
-                }
+                _keys.Add(kvp.Key);
+                _values.Add(kvp.Value);
             }
         }
 
