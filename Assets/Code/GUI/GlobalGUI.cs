@@ -8,11 +8,22 @@ namespace TAMKShooter.GUI
     public class GlobalGUI : MonoBehaviour
     {
         private LoadingIndicator _loadingIndicator;
+
+        private static GlobalGUI _current;
+
         protected void Awake()
         {
-            DontDestroyOnLoad(this.gameObject);
-            _loadingIndicator = GetComponentInChildren<LoadingIndicator>(true);
-            _loadingIndicator.Init();
+            if (_current == null)
+            {
+                _current = this;
+                DontDestroyOnLoad(this.gameObject);
+                _loadingIndicator = GetComponentInChildren<LoadingIndicator>(true);
+                _loadingIndicator.Init();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

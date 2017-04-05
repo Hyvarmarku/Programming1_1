@@ -42,6 +42,7 @@ namespace TAMKShooter
             }
             else
             {
+                FindObjectOfType<PlayerUnits>().PlayerDied(this);
                 gameObject.SetActive(false);
             }
         }

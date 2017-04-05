@@ -65,7 +65,10 @@ namespace TAMKShooter.Systems
             if (_prefabs == null)
                 _prefabs = GetComponentInChildren<Prefabs>();
             if (_pools == null)
+            {
                 _pools = GetComponentInChildren<Pools>();
+            }
+            _pools.Init();
 
             //SaveManager = new SaveManager(new BinaryFormatterSaveLoad<GameData>());
             SaveManager = new SaveManager(new JSONSaveLoad<GameData>());

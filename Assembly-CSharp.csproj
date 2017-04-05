@@ -69,6 +69,7 @@
      <Compile Include="Assets\Code\Interfaces\IShooter.cs" />
      <Compile Include="Assets\Code\Systems\AsteroidPool.cs" />
      <Compile Include="Assets\Code\Systems\GameManager.cs" />
+     <Compile Include="Assets\Code\Systems\GameOverManager.cs" />
      <Compile Include="Assets\Code\Systems\GenericPool.cs" />
      <Compile Include="Assets\Code\Systems\Global.cs" />
      <Compile Include="Assets\Code\Systems\InputManager.cs" />
@@ -84,6 +85,7 @@
      <Compile Include="Assets\Code\Systems\SaveLoad\JSONSaveLoad.cs" />
      <Compile Include="Assets\Code\Systems\SaveLoad\SaveManager.cs" />
      <Compile Include="Assets\Code\Systems\SceneManager.cs" />
+     <Compile Include="Assets\Code\Systems\States\GameOverState.cs" />
      <Compile Include="Assets\Code\Systems\States\GameState.cs" />
      <Compile Include="Assets\Code\Systems\States\GameStateBase.cs" />
      <Compile Include="Assets\Code\Systems\States\MenuState.cs" />

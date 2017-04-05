@@ -40,6 +40,7 @@ namespace TAMKShooter.Systems
 
             AddState(startingState);
             AddState(new GameState());
+            AddState(new GameOverState());
 
             currentState = startingState;
         }

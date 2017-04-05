@@ -7,7 +7,7 @@ namespace TAMKShooter.Systems
     public class Pools : MonoBehaviour
     {
         [SerializeField]
-        private List<ProjectilePool> _projectilePool = new List<ProjectilePool>();
+        private List<ProjectilePool> _projectilePools = new List<ProjectilePool>();
         [SerializeField]
         private AsteroidPool _asteroidPool;
 
@@ -17,7 +17,7 @@ namespace TAMKShooter.Systems
         {
             ProjectilePool result = null;
 
-            foreach (ProjectilePool pp in _projectilePool)
+            foreach (ProjectilePool pp in _projectilePools)
             {
                 if (pp.projectileType == projectileType)
                 {
@@ -27,6 +27,31 @@ namespace TAMKShooter.Systems
             }
 
             return result;
+        }
+
+        public void Init()
+        {
+            var projectilePools = GetComponentsInChildren<ProjectilePool>(true);
+
+            for( int i = 0; i < projectilePools.Length; i++)
+            {
+                var projectilePool = projectilePools[i];
+                if (!_projectilePools.Contains(projectilePool))
+                {
+                    _projectilePools.Add(projectilePool);
+                }
+            }
+
+            foreach (var projectilePool in _projectilePools)
+            {
+                projectilePool.Init();
+            }
+
+            if (_asteroidPool == null)
+            {
+                _asteroidPool = GetComponentInChildren<AsteroidPool>(true);
+            }
+            _asteroidPool.Init();
         }
     }
 }

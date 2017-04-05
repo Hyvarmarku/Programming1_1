@@ -14,6 +14,8 @@ namespace TAMKShooter.Configs
             {2, "Level2" }
         };
 
+        public const string GameOverSceneName = "GameOver";
+
         public const string PlayerProjectileLayerName = "PlayerProjectile";
         public const string EnemyProjectileLayerName = "EnemyProjectile";
 

@@ -16,11 +16,10 @@ namespace TAMKShooter.Systems
         private List<T> _pool;
         private List<bool> _isActive;
 
-        protected void Awake()
+        public void Init()
         {
             _pool = new List<T>(_objectAmount);
             _isActive = new List<bool>(_objectAmount);
-
             for (int i = 0; i < _objectAmount; i++)
             {
                 AddItemToPool();

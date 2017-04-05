@@ -13,7 +13,7 @@ namespace TAMKShooter
 
         // TODO: Add support for boosters
 
-        protected void Awake()
+        public void Init()
         {
             _weapons = GetComponentsInChildren<Weapon>();
             _shootingRate = 1 / _shootingSpeed;

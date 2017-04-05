@@ -38,6 +38,9 @@ namespace TAMKShooter
             mover = gameObject.GetOrAddComponent<Mover>();
             weapons = gameObject.GetComponentInChildren<WeaponController>();
 
+            if(weapons != null)
+                weapons.Init();
+
             health.HealthChanged += HealthChanged;
         }
 

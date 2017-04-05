@@ -1,1 +1,1 @@
-{"_keys":["StartGame","LoadGame","QuitGame"],"_values":["Aloita Peli","Lataa Peli","Lopeta Peli"]}
+{"_keys":["StartGame","LoadGame","QuitGame","BackToMenu"],"_values":["Aloita Peli","Lataa Peli","Lopeta Peli","Päävalikkoon"]}

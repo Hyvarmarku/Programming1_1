@@ -2,6 +2,7 @@
 using TAMKShooter.Data;
 using System.Collections.Generic;
 using TAMKShooter.Systems;
+using System;
 
 namespace TAMKShooter
 {
@@ -50,6 +51,22 @@ namespace TAMKShooter
             else
             {
                 Debug.LogError("FAILED TO ADD A NEW PLAYER. (CURRENT) " + playersCreated + " / " + maxPlayers + " (MAX ALLOWED)");
+            }
+        }
+
+        public void PlayerDied(PlayerUnit playerUnit)
+        {
+            bool arePlayersAlive = false;
+            foreach (var player in _players.Values)
+            {
+                if (player.data.lives > 0)
+                {
+                    arePlayersAlive = true;
+                }
+            }
+            if (!arePlayersAlive)
+            {
+                Global.Instance.gameManager.PerformTransition(GameStateTransitionType.InGameToGameOver);
             }
         }
 
